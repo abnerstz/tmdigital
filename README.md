@@ -737,38 +737,9 @@ O seed cria:
 
 ---
 
-## 🤝 Contribuindo
-
-Este projeto foi desenvolvido como parte do processo seletivo. Para contribuições futuras:
-
-1. Crie uma branch para sua feature (`git checkout -b feature/nova-funcionalidade`)
-2. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
-3. Push para a branch (`git push origin feature/nova-funcionalidade`)
-4. Abra um Pull Request
-
----
-
 ## 📄 Licença
 
 Este projeto foi desenvolvido para fins de avaliação técnica no processo seletivo da TM Digital.
-
----
-
-## 👨‍💻 Autor
-
-**Abner Santos**
-
-- WhatsApp: [82 9 81018391](https://wa.me/5582981018391)
-- Email: [seu-email@exemplo.com]
-
----
-
-## 📞 Contato
-
-Para dúvidas ou sugestões sobre o projeto, entre em contato:
-
-- **WhatsApp:** 82 9 81018391
-- **Email:** [seu-email@exemplo.com]
 
 ---
 
