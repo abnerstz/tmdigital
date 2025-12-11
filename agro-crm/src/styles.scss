@@ -1,0 +1,873 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+/* ========================================
+   VARIÁVEIS GLOBAIS - Tema Agrícola
+   ======================================== */
+:root {
+  /* Cores Primárias - Roxo */
+  --primary-50: #F5F3FF;
+  --primary-100: #EDE9FE;
+  --primary-200: #DDD6FE;
+  --primary-300: #C4B5FD;
+  --primary-400: #A78BFA;
+  --primary-500: #8B5CF6;
+  --primary-600: #6047DA;
+  --primary-700: #4C1D95;
+  --primary-color: #6047DA;
+
+  /* Cores Secundárias */
+  --secondary-color: #F59E0B;
+  --accent-color: #6047DA;
+
+  /* Status Colors */
+  --status-novo: #3B82F6;
+  --status-contato: #F59E0B;
+  --status-negociacao: #8B5CF6;
+  --status-convertido: #10B981;
+  --status-perdido: #EF4444;
+
+  /* Neutros */
+  --gray-50: #F9FAFB;
+  --gray-100: #F3F4F6;
+  --gray-200: #E5E7EB;
+  --gray-300: #D1D5DB;
+  --gray-400: #9CA3AF;
+  --gray-500: #6B7280;
+  --gray-600: #4B5563;
+  --gray-700: #374151;
+  --gray-800: #1F2937;
+  --gray-900: #111827;
+
+  /* Backgrounds */
+  --surface-ground: #F9FAFB;
+  --surface-section: #FFFFFF;
+  --surface-card: #FFFFFF;
+  --surface-overlay: #FFFFFF;
+  --surface-border: #E5E7EB;
+  --surface-hover: #F3F4F6;
+
+  /* Text */
+  --text-color: #111827;
+  --text-color-secondary: #6B7280;
+
+  /* Espaçamentos */
+  --spacing-xs: 0.25rem;  /* 4px */
+  --spacing-sm: 0.5rem;   /* 8px */
+  --spacing-md: 1rem;     /* 16px */
+  --spacing-lg: 1.5rem;   /* 24px */
+  --spacing-xl: 2rem;     /* 32px */
+  --spacing-2xl: 3rem;    /* 48px */
+  --spacing-3xl: 4rem;    /* 64px */
+
+  /* Border Radius */
+  --border-radius-sm: 6px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+  /* PrimeNG Theme Variables - Sobrescrevendo cores padrão para roxo */
+  --p-primary-color: #6047DA;
+  --p-primary-contrast-color: #ffffff;
+  --p-primary-hover-color: #4C1D95;
+  --p-primary-active-color: #4C1D95;
+  --p-primary-focus-ring: 0 0 0 0.2rem rgba(96, 71, 218, 0.2);
+  
+  /* PrimeNG Button Outlined */
+  --p-button-outlined-primary-color: #6047DA;
+  --p-button-outlined-primary-border-color: #6047DA;
+  --p-button-outlined-primary-hover-background: rgba(96, 71, 218, 0.04);
+  --p-button-outlined-primary-hover-border-color: #6047DA;
+  --p-button-outlined-primary-active-background: rgba(96, 71, 218, 0.16);
+  --p-button-outlined-primary-active-border-color: #6047DA;
+  --p-button-outlined-primary-focus-ring: 0 0 0 0.2rem rgba(96, 71, 218, 0.2);
+  
+  /* PrimeNG Button Text */
+  --p-button-text-primary-color: #6047DA;
+  --p-button-text-primary-hover-background: rgba(96, 71, 218, 0.04);
+  --p-button-text-primary-active-background: rgba(96, 71, 218, 0.16);
+  --p-button-text-primary-focus-ring: 0 0 0 0.2rem rgba(96, 71, 218, 0.2);
+  
+  /* PrimeNG Input Focus */
+  --p-input-focus-border-color: #6047DA;
+  --p-input-focus-ring: 0 0 0 0.2rem rgba(96, 71, 218, 0.2);
+  
+  /* PrimeNG Dropdown */
+  --p-dropdown-focus-border-color: #6047DA;
+  --p-dropdown-focus-ring: 0 0 0 0.2rem rgba(96, 71, 218, 0.2);
+  
+  /* PrimeNG Calendar */
+  --p-calendar-focus-border-color: #6047DA;
+  --p-calendar-focus-ring: 0 0 0 0.2rem rgba(96, 71, 218, 0.2);
+  
+  /* PrimeNG Checkbox */
+  --p-checkbox-checked-background: #6047DA;
+  --p-checkbox-checked-border-color: #6047DA;
+  --p-checkbox-focus-ring: 0 0 0 0.2rem rgba(96, 71, 218, 0.2);
+  
+  /* PrimeNG Radio */
+  --p-radiobutton-checked-background: #6047DA;
+  --p-radiobutton-checked-border-color: #6047DA;
+  --p-radiobutton-focus-ring: 0 0 0 0.2rem rgba(96, 71, 218, 0.2);
+  
+  /* PrimeNG Toggle Switch */
+  --p-toggleswitch-checked-background: #6047DA;
+  --p-toggleswitch-focus-ring: 0 0 0 0.2rem rgba(96, 71, 218, 0.2);
+  
+  /* PrimeNG Link */
+  --p-link-color: #6047DA;
+  --p-link-hover-color: #4C1D95;
+  
+  /* PrimeNG Menu */
+  --p-menuitem-active-background: rgba(96, 71, 218, 0.12);
+  --p-menuitem-active-color: #6047DA;
+  
+  /* PrimeNG TabView */
+  --p-tabview-nav-link-active-border-color: #6047DA;
+  --p-tabview-nav-link-active-color: #6047DA;
+  
+  /* PrimeNG ProgressBar */
+  --p-progressbar-value-background: #6047DA;
+  
+  /* PrimeNG Slider */
+  --p-slider-handle-background: #6047DA;
+  --p-slider-range-background: #6047DA;
+  
+  /* PrimeNG Button Primary */
+  --p-button-primary-background: #6047DA;
+  --p-button-primary-border-color: #6047DA;
+  --p-button-primary-hover-background: #4C1D95;
+  --p-button-primary-hover-border-color: #4C1D95;
+  --p-button-primary-active-background: #4C1D95;
+  --p-button-primary-active-border-color: #4C1D95;
+  --p-button-primary-focus-ring: 0 0 0 0.2rem rgba(96, 71, 218, 0.2);
+  
+  /* PrimeNG Button Success - Sobrescrever para roxo */
+  --p-button-success-background: #6047DA;
+  --p-button-success-border-color: #6047DA;
+  --p-button-success-hover-background: #4C1D95;
+  --p-button-success-hover-border-color: #4C1D95;
+  --p-button-success-active-background: #4C1D95;
+  --p-button-success-active-border-color: #4C1D95;
+  --p-button-success-focus-ring: 0 0 0 0.2rem rgba(96, 71, 218, 0.2);
+  --p-button-success-color: #ffffff;
+  
+  /* PrimeNG Button Success Outlined */
+  --p-button-outlined-success-color: #6047DA;
+  --p-button-outlined-success-border-color: #6047DA;
+  --p-button-outlined-success-hover-background: rgba(96, 71, 218, 0.04);
+  --p-button-outlined-success-hover-border-color: #6047DA;
+  --p-button-outlined-success-active-background: rgba(96, 71, 218, 0.16);
+  --p-button-outlined-success-active-border-color: #6047DA;
+  --p-button-outlined-success-focus-ring: 0 0 0 0.2rem rgba(96, 71, 218, 0.2);
+  
+  /* PrimeNG Button Success Text */
+  --p-button-text-success-color: #6047DA;
+  --p-button-text-success-hover-background: rgba(96, 71, 218, 0.04);
+  --p-button-text-success-active-background: rgba(96, 71, 218, 0.16);
+  --p-button-text-success-focus-ring: 0 0 0 0.2rem rgba(96, 71, 218, 0.2);
+  
+  /* PrimeNG Autocomplete */
+  --p-autocomplete-focus-border-color: #6047DA;
+  --p-autocomplete-focus-ring: 0 0 0 0.2rem rgba(96, 71, 218, 0.2);
+  
+  /* PrimeNG Chips */
+  --p-chip-primary-background: #6047DA;
+  --p-chip-primary-color: #ffffff;
+  
+  /* PrimeNG Badge */
+  --p-badge-primary-background: #6047DA;
+  --p-badge-primary-color: #ffffff;
+  
+  /* PrimeNG Tag */
+  --p-tag-primary-background: #6047DA;
+  --p-tag-primary-color: #ffffff;
+  
+  /* PrimeNG SplitButton */
+  --p-splitbutton-primary-background: #6047DA;
+  --p-splitbutton-primary-border-color: #6047DA;
+  --p-splitbutton-primary-hover-background: #4C1D95;
+  --p-splitbutton-primary-hover-border-color: #4C1D95;
+  
+  /* PrimeNG SpeedDial */
+  --p-speeddial-button-primary-background: #6047DA;
+  --p-speeddial-button-primary-hover-background: #4C1D95;
+  
+  /* PrimeNG Rating */
+  --p-rating-primary-color: #6047DA;
+  
+  /* PrimeNG SelectButton */
+  --p-selectbutton-primary-background: #6047DA;
+  --p-selectbutton-primary-border-color: #6047DA;
+  --p-selectbutton-primary-hover-background: #4C1D95;
+  --p-selectbutton-primary-hover-border-color: #4C1D95;
+  --p-selectbutton-primary-active-background: #4C1D95;
+  --p-selectbutton-primary-active-border-color: #4C1D95;
+  
+  /* PrimeNG TreeSelect */
+  --p-treeselect-focus-border-color: #6047DA;
+  --p-treeselect-focus-ring: 0 0 0 0.2rem rgba(96, 71, 218, 0.2);
+  
+  /* PrimeNG MultiSelect */
+  --p-multiselect-focus-border-color: #6047DA;
+  --p-multiselect-focus-ring: 0 0 0 0.2rem rgba(96, 71, 218, 0.2);
+  
+  /* PrimeNG InputNumber */
+  --p-inputnumber-focus-border-color: #6047DA;
+  --p-inputnumber-focus-ring: 0 0 0 0.2rem rgba(96, 71, 218, 0.2);
+  
+  /* PrimeNG Textarea */
+  --p-inputtextarea-focus-border-color: #6047DA;
+  --p-inputtextarea-focus-ring: 0 0 0 0.2rem rgba(96, 71, 218, 0.2);
+  
+  /* PrimeNG Password */
+  --p-password-focus-border-color: #6047DA;
+  --p-password-focus-ring: 0 0 0 0.2rem rgba(96, 71, 218, 0.2);
+  
+  /* PrimeNG ColorPicker */
+  --p-colorpicker-focus-border-color: #6047DA;
+  --p-colorpicker-focus-ring: 0 0 0 0.2rem rgba(96, 71, 218, 0.2);
+  
+  /* PrimeNG Editor */
+  --p-editor-focus-border-color: #6047DA;
+  --p-editor-focus-ring: 0 0 0 0.2rem rgba(96, 71, 218, 0.2);
+  
+  /* PrimeNG FileUpload */
+  --p-fileupload-button-primary-background: #6047DA;
+  --p-fileupload-button-primary-border-color: #6047DA;
+  --p-fileupload-button-primary-hover-background: #4C1D95;
+  --p-fileupload-button-primary-hover-border-color: #4C1D95;
+}
+
+/* ========================================
+   RESET E BASE
+   ======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  color: var(--text-color);
+  background-color: var(--surface-ground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================================
+   TIPOGRAFIA
+   ======================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--primary-600);
+}
+
+/* ========================================
+   CUSTOMIZAÇÕES PRIMENG
+   ======================================== */
+
+/* Cards */
+.p-card {
+  background: var(--surface-card);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--surface-border);
+  transition: all 0.2s ease;
+}
+
+.p-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.p-card .p-card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.p-card .p-card-subtitle {
+  color: var(--text-color-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.p-card .p-card-body {
+  padding: 1.5rem;
+}
+
+.p-card .p-card-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--surface-border);
+  background: var(--gray-50);
+}
+
+/* Botões - Forçar roxo como padrão e sobrescrever verde */
+.p-button {
+  border-radius: var(--border-radius-md);
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.2s;
+}
+
+/* Botões padrão (sem outlined/text) - sempre roxo */
+.p-button:not(.p-button-outlined):not(.p-button-text):not(.p-button-danger):not(.p-button-warning):not(.p-button-info):not(.p-button-secondary) {
+  background: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #ffffff !important;
+}
+
+.p-button:not(.p-button-outlined):not(.p-button-text):not(.p-button-danger):not(.p-button-warning):not(.p-button-info):not(.p-button-secondary):hover {
+  background: var(--primary-600) !important;
+  border-color: var(--primary-600) !important;
+  color: #ffffff !important;
+}
+
+/* Sobrescrever botões success (verde) para roxo */
+.p-button.p-button-success,
+.p-button[severity="success"] {
+  background: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #ffffff !important;
+}
+
+.p-button.p-button-success:hover,
+.p-button[severity="success"]:hover {
+  background: var(--primary-600) !important;
+  border-color: var(--primary-600) !important;
+  color: #ffffff !important;
+}
+
+/* Botões outlined success - roxo */
+.p-button.p-button-outlined.p-button-success,
+.p-button.p-button-outlined[severity="success"] {
+  color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  background: transparent !important;
+}
+
+.p-button.p-button-outlined.p-button-success:hover,
+.p-button.p-button-outlined[severity="success"]:hover {
+  background: rgba(96, 71, 218, 0.04) !important;
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+}
+
+/* Botões text success - roxo */
+.p-button.p-button-text.p-button-success,
+.p-button.p-button-text[severity="success"] {
+  color: var(--primary-color) !important;
+  background: transparent !important;
+}
+
+.p-button.p-button-text.p-button-success:hover,
+.p-button.p-button-text[severity="success"]:hover {
+  background: rgba(96, 71, 218, 0.04) !important;
+  color: var(--primary-color) !important;
+}
+
+/* Garantir que botões sem severity específico usem roxo */
+.p-button:not([severity]):not(.p-button-danger):not(.p-button-warning):not(.p-button-info):not(.p-button-secondary):not(.p-button-help) {
+  background: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #ffffff !important;
+}
+
+.p-button:not([severity]):not(.p-button-danger):not(.p-button-warning):not(.p-button-info):not(.p-button-secondary):not(.p-button-help):hover {
+  background: var(--primary-600) !important;
+  border-color: var(--primary-600) !important;
+  color: #ffffff !important;
+}
+
+/* Sobrescrever qualquer cor verde que possa aparecer em botões */
+.p-button[style*="green"],
+.p-button[style*="#10B981"],
+.p-button[style*="#059669"],
+.p-button[style*="rgb(16, 185, 129)"] {
+  background: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #ffffff !important;
+}
+
+/* Garantir que todos os botões do PrimeNG usem roxo por padrão */
+.p-button.p-component {
+  --p-button-background: var(--primary-color);
+  --p-button-border-color: var(--primary-color);
+  --p-button-color: #ffffff;
+}
+
+/* Sobrescrever variáveis CSS do PrimeNG para success */
+.p-button.p-button-success,
+.p-button[severity="success"] {
+  --p-button-background: var(--primary-color) !important;
+  --p-button-border-color: var(--primary-color) !important;
+  --p-button-color: #ffffff !important;
+}
+
+/* Inputs */
+.p-inputtext,
+.p-dropdown,
+.p-multiselect,
+.p-calendar,
+.p-inputtextarea,
+.p-autocomplete {
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--surface-border);
+  font-family: 'DM Sans', sans-serif;
+  width: 100%;
+}
+
+.p-dropdown,
+.p-calendar,
+.p-autocomplete,
+.p-multiselect {
+  min-height: 2.5rem;
+  height: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.p-dropdown .p-dropdown-label,
+.p-calendar .p-inputtext,
+.p-autocomplete .p-autocomplete-input {
+  width: 100%;
+  flex: 1;
+  padding-right: 2.5rem;
+}
+
+.p-dropdown .p-dropdown-trigger,
+.p-autocomplete .p-autocomplete-dropdown {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  z-index: 1;
+}
+
+.p-dropdown .p-dropdown-label-container,
+.p-autocomplete .p-autocomplete-input-container,
+.p-multiselect .p-multiselect-label-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 2.5rem;
+}
+
+.p-multiselect {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 2.5rem;
+  width: 100%;
+}
+
+.p-multiselect .p-multiselect-label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex: 1;
+  padding-right: 3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.p-multiselect .p-multiselect-trigger {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.p-multiselect .p-multiselect-clear-icon {
+  position: absolute;
+  right: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.p-multiselect .p-multiselect-label-container .p-multiselect-token {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.25rem;
+}
+
+.p-dropdown .p-dropdown-panel,
+.p-autocomplete .p-autocomplete-panel {
+  z-index: 1000;
+}
+
+.p-inputtextarea {
+  padding: 0.5rem 0.75rem;
+  line-height: 1.5;
+}
+
+.p-inputtext:enabled:focus,
+.p-dropdown:not(.p-disabled).p-focus,
+.p-multiselect:not(.p-disabled).p-focus,
+.p-inputtextarea:enabled:focus,
+.p-autocomplete:not(.p-disabled).p-focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(96, 71, 218, 0.1);
+}
+
+/* Tabelas */
+.p-datatable .p-datatable-thead > tr > th {
+  color: var(--text-color);
+  font-weight: 700;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.p-datatable .p-datatable-tbody > tr {
+  transition: all 0.2s ease;
+  border-bottom: 1px solid var(--surface-border);
+}
+
+.p-datatable .p-datatable-tbody > tr:hover {
+  background: var(--primary-50);
+  transform: scale(1.01);
+}
+
+.p-datatable.p-datatable-striped .p-datatable-tbody > tr:nth-child(even) {
+  background: var(--gray-50);
+}
+
+.p-datatable.p-datatable-striped .p-datatable-tbody > tr:nth-child(even):hover {
+  background: var(--primary-50);
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+  padding: 0.875rem 1rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Skeleton Loader Global Styles */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Tags/Badges */
+.p-tag {
+  font-weight: 700;
+  padding: 0.4rem 0.85rem;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.badge-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 0.5rem;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* Toast */
+.p-toast .p-toast-message {
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Dialog */
+.p-dialog {
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-xl);
+}
+
+.p-dialog .p-dialog-header {
+  border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+  padding: 1.5rem;
+}
+
+.p-dialog .p-dialog-content {
+  padding: 1.5rem;
+}
+
+/* ========================================
+   CLASSES UTILITÁRIAS
+   ======================================== */
+.w-full {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.gap-1 {
+  gap: var(--spacing-sm);
+}
+
+.gap-2 {
+  gap: var(--spacing-md);
+}
+
+.gap-3 {
+  gap: var(--spacing-lg);
+}
+
+.mb-1 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.mb-2 {
+  margin-bottom: var(--spacing-md);
+}
+
+.mb-3 {
+  margin-bottom: var(--spacing-lg);
+}
+
+.mt-1 {
+  margin-top: var(--spacing-sm);
+}
+
+.mt-2 {
+  margin-top: var(--spacing-md);
+}
+
+.mt-3 {
+  margin-top: var(--spacing-lg);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/* ========================================
+   SCROLLBAR CUSTOMIZADA
+   ======================================== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-400);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-500);
+}
+
+/* ========================================
+   ANIMAÇÕES
+   ======================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.3s ease-out;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .p-datatable.p-datatable-responsive-scroll > .p-datatable-wrapper {
+    overflow-x: auto;
+  }
+}
+
+/* ========================================
+   LOADING OVERLAY
+   ======================================== */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loading-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
